@@ -2,10 +2,13 @@ from flask import (
     Flask,
     request
 )
+from tensorflow import keras
 
 
 app = Flask(__name__)
 
+# Load pre-trained model
+model = keras.models.load_model('power_prod.h5')
 
 @app.route("/")
 def home():
@@ -13,8 +16,18 @@ def home():
 
 @app.route("/api/speed", methods=['POST'])
 def query():
-  req = request.get_json()["query"]
-  return { "data": req }
+  try:
+    req = float(request.get_json()["query"])
+
+    return { 
+      "data": model.predict([req]).tolist(),
+      "success": True
+    }
+  except Exception as err:
+    return { 
+      "error": err,
+      "success": False
+    }
 
 
 if __name__ == "__main__":
