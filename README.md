@@ -6,7 +6,17 @@ Y4S1 Emerging Technologies Project
 
 A web service that uses machine learning to predict wind turbine power output from wind speed values defined in the data set [powerproduction.csv](./powerproduction.csv).
 
-## Run a Development Server
+## Running the Notebook
+
+You can run the notebook by first installing [Anaconda](https://www.anaconda.com/) and then executing the below command from within the repository's root directory.
+
+```sh
+$ jupyter notebook
+```
+
+## Running the Web Service
+
+### Development Server
 
 To start a development server run the following command and then open `localhost:5000` in a web browser.
 
@@ -14,7 +24,7 @@ To start a development server run the following command and then open `localhost
 $ python app.py
 ```
 
-## Docker
+### Docker
 
 ### Build Image
 
