@@ -26,13 +26,13 @@ $ python app.py
 
 ### Docker
 
-### Build Image
+#### Build Image
 
 ```sh
 $ docker build -t power-production .
 ```
 
-### Run Image
+#### Run Image
 
 ```sh
 $ docker run -d -p 5000:5000 power-production
