@@ -4,11 +4,11 @@ new Vue({
         return {
             result: '',
             query: '',
+            invalidInput: false,
             error: {
                 show: false,
                 message: ''
             },
-            invalidInput: false
         }
     },
     computed: {
@@ -39,9 +39,9 @@ new Vue({
                 .then(res => res.json())
                 .then(res => {
                     if (res.success) {
-                        this.result = res.data[0][0] + '';
+                        this.result = res.data[0] + '';
                     } else {
-                        throw new Error();
+                        throw new Error(res.message);
                     }
 
                     // Hide the error notification
