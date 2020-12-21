@@ -12,15 +12,15 @@ app = Flask(__name__)
 
 # Load pre-trained model
 # Ref: Martin Thoma - https://stackoverflow.com/a/43263973
-model = keras.models.load_model('power_prod.h5')
+model = keras.models.load_model("power_prod.h5")
 
 
 @app.route("/")
 def home():
-    return app.send_static_file('index.html')
+    return app.send_static_file("index.html")
 
 
-@app.route("/api/speed", methods=['POST'])
+@app.route("/api/speed", methods=["POST"])
 def speed():
     try:
         query = float(request.get_json()["query"])
