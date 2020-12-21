@@ -11,6 +11,7 @@ from werkzeug.exceptions import BadRequest
 app = Flask(__name__)
 
 # Load pre-trained model
+# Ref: Martin Thoma - https://stackoverflow.com/a/43263973
 model = keras.models.load_model('power_prod.h5')
 
 
