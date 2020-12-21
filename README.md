@@ -8,13 +8,15 @@ A web service that uses machine learning to predict wind turbine power output fr
 
 ## Running the Notebook
 
-You can run the notebook by first installing [Anaconda](https://www.anaconda.com/) and then executing the below command from within the repository's root directory.
+The model is created in a Jupyter notebook using Keras, and you can run the notebook by first installing [Anaconda](https://www.anaconda.com/) and then executing the below command from within the repository's root directory.
 
 ```sh
 $ jupyter notebook
 ```
 
 ## Running the Web Service
+
+The web service consists of a Flask application which serves a simple Vue.js frontend.
 
 ### Development Server
 
@@ -25,6 +27,8 @@ $ python app.py
 ```
 
 ### Docker
+
+You can run the web service in a Docker container by following the steps below.
 
 #### Build Image
 
