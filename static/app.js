@@ -4,7 +4,6 @@ new Vue({
         return {
             result: '',
             query: '',
-            invalidInput: false,
             error: {
                 show: false,
                 message: ''
