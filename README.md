@@ -20,6 +20,12 @@ The web service consists of a Flask application which serves a simple Vue.js fro
 
 ### Development Server
 
+First run the following to install the necessary dependencies.
+
+```sh
+$ pip install -r requirements.txt
+```
+
 To start a development server run the following command and then open `localhost:5000` in a web browser.
 
 ```sh
