@@ -3,6 +3,7 @@ new Vue({
     data() {
         return {
             result: '',
+            plot: '',
             query: '',
             error: {
                 show: false,
@@ -38,7 +39,8 @@ new Vue({
                 .then(res => res.json())
                 .then(res => {
                     if (res.success) {
-                        this.result = res.data[0] + '';
+                        this.result = res.data.predictions[0] + '';
+                        this.plot = res.data.plot;
                     } else {
                         throw new Error(res.message);
                     }
@@ -53,7 +55,7 @@ new Vue({
                         show: true,
                         message: err.message || 'Something bad happened'
                     }
-                })
+                });
         }
     }
 });
