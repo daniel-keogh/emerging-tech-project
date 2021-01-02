@@ -71,22 +71,25 @@
                   </div>
                 </div>
 
-                <div class="field has-addons">
-                  <div class="control is-expanded">
-                    <input type="text"
-                      class="input"
-                      :class="{ 'is-danger' : isInvalid }"
-                      placeholder="Enter a wind speed value..."
-                      required
-                      v-model="query"
-                    >
-                  </div>
-                  <div class="control">
-                    <button class="button is-primary" 
-                      type="submit"
-                      @click="submit">
-                      Submit
-                    </button>
+                <div>
+                  <label class="label">Speed</label>
+                  <div class="field has-addons">
+                    <div class="control is-expanded">
+                      <input type="text"
+                        class="input"
+                        :class="{ 'is-danger' : isInvalid }"
+                        placeholder="Enter a wind speed value..."
+                        required
+                        v-model="query"
+                      >
+                    </div>
+                    <div class="control">
+                      <button class="button is-primary" 
+                        type="submit"
+                        @click="submit">
+                        Submit
+                      </button>
+                    </div>
                   </div>
                 </div>
               </form>
