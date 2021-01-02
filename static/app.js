@@ -4,6 +4,21 @@ new Vue({
         return {
             result: '',
             plot: '',
+            models: [
+                {
+                    name: 'Linear',
+                    key: 'lin'
+                },
+                {
+                    name: 'Sigmoid',
+                    key: 'sig'
+                },
+                {
+                    name: 'Sigmoid (No Outliers)',
+                    key: 'signo'
+                },
+            ],
+            selectedModel: 'signo',
             query: '',
             error: {
                 show: false,
@@ -31,11 +46,12 @@ new Vue({
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({
-                    query: this.query
+                    query: this.query,
+                    model: this.selectedModel,
                 }),
             };
 
-            fetch("/api/speed", options)
+            fetch('/api/speed', options)
                 .then(res => res.json())
                 .then(res => {
                     if (res.success) {
