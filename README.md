@@ -18,6 +18,8 @@ $ jupyter notebook
 
 The web service consists of a Flask application which serves a simple Vue.js frontend.
 
+![Frontend](https://user-images.githubusercontent.com/37158241/103477689-1ca81c80-4db9-11eb-9ce2-f7a691c8165e.png)
+
 ### Development Server
 
 First run the following to install the necessary dependencies.
