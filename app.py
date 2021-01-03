@@ -39,7 +39,8 @@ def get_speed():
     predicted power output.
 
     A floating point number called `query` should be included
-    in the body of the request.
+    in the body of the request, as well as the type of `model`
+    to use for carrying out the prediction.
     """
     try:
         query = float(request.get_json()["query"])
